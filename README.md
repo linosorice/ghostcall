@@ -8,7 +8,7 @@
 
 LLMs invent methods that don't exist. `ghostcall` parses Python code, looks at the packages you actually have installed, and tells you which calls are real and which are phantoms.
 
-![demo](demo.gif)
+![demo](https://raw.githubusercontent.com/linosorice/ghostcall/main/demo.gif)
 
 ## Install
 
