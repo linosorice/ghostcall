@@ -1,0 +1,50 @@
+name: Bug report
+description: ghostcall produced wrong output, crashed, or behaved unexpectedly.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did ghostcall do that was wrong?
+      placeholder: |
+        I ran ghostcall on X and got Y, but I expected Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: The exact command and input that triggers the issue.
+      render: shell
+      placeholder: |
+        $ echo 'import json; json.dumps({})' | ghostcall
+        ...
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: ghostcall version
+      description: Output of `ghostcall --version`
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: Output of `python --version`
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "e.g. macOS 15.0, Ubuntu 24.04, Windows 11"
+    validations:
+      required: false

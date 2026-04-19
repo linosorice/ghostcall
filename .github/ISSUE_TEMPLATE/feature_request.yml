@@ -1,0 +1,39 @@
+name: Feature request
+description: Suggest a capability ghostcall should have.
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening, please check the [Limitations section of the README](../blob/main/README.md#limitations) — ghostcall deliberately excludes certain capabilities. Proposals to lift those limitations are fine, but expect a discussion about scope.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What real use case is ghostcall missing for you today?
+      placeholder: |
+        When I paste code from [tool X], ghostcall misses [pattern Y] because ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: What should ghostcall do? Include input and expected output if possible.
+      render: shell
+      placeholder: |
+        $ ghostcall new-flag input.py
+        expected output: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you tried mypy, pyright, a different tool, or a workaround?
+    validations:
+      required: false
